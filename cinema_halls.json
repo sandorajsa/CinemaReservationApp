@@ -1,0 +1,29 @@
+{
+  "halls": [
+    {
+      "id": 1,
+      "rows": 20,
+      "columns": 30
+    },
+    {
+      "id": 2,
+      "rows": 15,
+      "columns": 20
+    },
+    {
+      "id": 3,
+      "rows": 10,
+      "columns": 15
+    },
+    {
+      "id": 4,
+      "rows": 16,
+      "columns": 22
+    },
+    {
+      "id": 5,
+      "rows": 22,
+      "columns": 32
+    }
+  ]
+}
