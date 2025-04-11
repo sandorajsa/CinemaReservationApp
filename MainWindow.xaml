@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CinemaReservationApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Popcorn Planet+" Height="1080" Width="1920" Background="#FFF8E1" WindowState="Maximized" Icon="./Resources/Images/logo.ico" ResizeMode="NoResize" FontFamily="./Resources/#Rubik">
+    <ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="500"/>
+                <RowDefinition Height="500"/>
+                <RowDefinition Height="500"/>
+            </Grid.RowDefinitions>
 
-    </Grid>
+            <Border Grid.Row="0" Background="#C62828">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Source="./Resources/Images/logo_png.png" Margin="0 0 50 0"/>
+                    <Label Content="POPCORN" FontSize="100" Margin="0 0 50 0" Foreground="#FFF8E1"/>
+                    <Label Content="PLANET" FontSize="100" Foreground="#FFF8E1"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+    
 </Window>

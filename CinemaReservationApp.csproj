@@ -8,4 +8,19 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="logo.ico" />
+    <None Remove="logo_png.png" />
+    <None Remove="Rubik-VariableFont_wght.ttf" />
+	<ResResource Include="Resources/Rubik-VariableFont_wght.ttf"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\logo.ico" />
+    <Content Include="Resources\Images\logo_png.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\Rubik-VariableFont_wght.ttf" />
+  </ItemGroup>
+
 </Project>
