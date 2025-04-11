@@ -1,0 +1,7 @@
+Popcorn - #FFF8E1
+Butter - #FFD54F
+Caramel - #C78C4D
+Burnt Caramel - #A8703F
+Box - #C62828
+Cola - #4E342E
+Midnight - #212121
