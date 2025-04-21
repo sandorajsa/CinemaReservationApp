@@ -12,7 +12,7 @@
     <None Remove="logo.ico" />
     <None Remove="logo_png.png" />
     <None Remove="Rubik-VariableFont_wght.ttf" />
-	<ResResource Include="Resources/Rubik-VariableFont_wght.ttf"/>
+	<ResResource Include="Resources/Rubik-VariableFont_wght.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +21,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\Rubik-VariableFont_wght.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\cinema_movies.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

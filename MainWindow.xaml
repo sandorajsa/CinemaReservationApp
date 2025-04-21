@@ -6,42 +6,41 @@
         xmlns:local="clr-namespace:CinemaReservationApp"
         mc:Ignorable="d"
         Title="Popcorn Planet+" Height="1080" Width="1920" Background="#FFF8E1" WindowState="Maximized" Icon="./Resources/Images/logo.ico" ResizeMode="NoResize" FontFamily="./Resources/#Rubik">
+    <Window.Resources>
+        <Style x:Key="categoryButtons" TargetType="Button">
+            <Setter Property="Background" Value="#FFD54F"/>
+            <Setter Property="Foreground" Value="#A8703F"/>
+            <Setter Property="Width" Value="auto"/>
+            <Setter Property="FontSize" Value="45"/>
+            <Setter Property="Margin" Value="30 0"/>
+            <Setter Property="Padding" Value="30 0"/>
+            <Setter Property="BorderBrush" Value="#FFD54F"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="2">
+                            <ContentPresenter  Margin="{TemplateBinding Padding}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    RecognizesAccessKey="True"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#A8703F"/>
+                    <Setter Property="Foreground" Value="#FFD54F"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <ScrollViewer>
         <Grid>
-            <Grid.Resources>
-                <Style x:Key="categoryButtons" TargetType="Button">
-                    <Setter Property="Background" Value="#FFD54F"/>
-                    <Setter Property="Foreground" Value="#A8703F"/>
-                    <Setter Property="Width" Value="auto"/>
-                    <Setter Property="FontSize" Value="45"/>
-                    <Setter Property="Margin" Value="30 0"/>
-                    <Setter Property="Padding" Value="30 0"/>
-                    <Setter Property="BorderBrush" Value="#FFD54F"/>
-                    <Setter Property="Cursor" Value="Hand"/>
-
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="Button">
-                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="2">
-                                    <ContentPresenter  Margin="{TemplateBinding Padding}"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    RecognizesAccessKey="True"/>    
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#A8703F"/>
-                            <Setter Property="Foreground" Value="#FFD54F"/>
-                            <Setter Property="BorderBrush" Value="Transparent"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Grid.Resources>
-            
             <Grid.RowDefinitions>
                 <RowDefinition Height="120"/>
                 <RowDefinition Height="200"/>
@@ -58,14 +57,8 @@
             </Border>
 
             <Grid x:Name="search_GR" Grid.Row="1" Margin="60">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Content="ROMANTIKUS" Style="{StaticResource categoryButtons}"/>
-                    <Button Content="AKCIÓ" Style="{StaticResource categoryButtons}"/>
-                    <Button Content="HORROR" Style="{StaticResource categoryButtons}"/>
-                    <Button Content="CSALÁDI" Style="{StaticResource categoryButtons}"/>
-                </StackPanel>
             </Grid>
+            <Grid x:Name="movies_GR" Grid.Row="2"></Grid>
         </Grid>
     </ScrollViewer>
-    
 </Window>

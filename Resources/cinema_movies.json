@@ -1,0 +1,38 @@
+[
+        {
+            "title": "Sinners",
+            "description": "Set in 1932 Mississippi, twin brothers return home only to confront a supernatural evil threatening their community.",
+            "poster": "https://upload.wikimedia.org/wikipedia/en/0/0d/Sinners_2025_poster.jpg",
+            "play_dates": [ "2025-04-18", "2025-04-19", "2025-04-20", "2025-04-21" ],
+            "length_minutes": 138,
+            "age_limit": "16+",
+            "genre": "Horror"
+        },
+        {
+            "title": "Mickey 17",
+            "description": "A disposable worker on a space expedition refuses to let his replacement clone take over his life.",
+            "poster": "https://upload.wikimedia.org/wikipedia/en/7/7e/Mickey_17_poster.jpg",
+            "play_dates": [ "2025-03-07", "2025-03-08", "2025-03-09", "2025-03-10" ],
+            "length_minutes": 137,
+            "age_limit": "16+",
+            "genre": "Science Fiction"
+        },
+        {
+            "title": "The Amateur",
+            "description": "A CIA cryptographer seeks revenge after his wife is killed in a terrorist attack, uncovering a web of conspiracy.",
+            "poster": "https://upload.wikimedia.org/wikipedia/en/3/3d/The_Amateur_2025_poster.jpg",
+            "play_dates": [ "2025-04-11", "2025-04-12", "2025-04-13", "2025-04-14" ],
+            "length_minutes": 124,
+            "age_limit": "18+",
+            "genre": "Action"
+        },
+        {
+            "title": "Last Breath",
+            "description": "A deep-sea diver becomes trapped on the ocean floor, and his team races against time to rescue him.",
+            "poster": "https://upload.wikimedia.org/wikipedia/en/5/5e/Last_Breath_2025_poster.jpg",
+            "play_dates": [ "2025-02-28", "2025-03-01", "2025-03-02", "2025-03-03" ],
+            "length_minutes": 93,
+            "age_limit": "12+",
+            "genre": "Thriller"
+        }
+    ]
