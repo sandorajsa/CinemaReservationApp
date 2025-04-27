@@ -11,13 +11,26 @@
   <ItemGroup>
     <None Remove="logo.ico" />
     <None Remove="logo_png.png" />
+    <None Remove="Resources\Images\sinners.jpg" />
     <None Remove="Rubik-VariableFont_wght.ttf" />
 	<ResResource Include="Resources/Rubik-VariableFont_wght.ttf" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Resources\Images\logo.ico" />
+    <Content Include="Resources\Images\last_breath.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\logo_png.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\mickey_17.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\sinners.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\the_amateur.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\Rubik-VariableFont_wght.ttf" />
