@@ -23,7 +23,7 @@ namespace CinemaReservationApp
         public ObservableCollection<Movie> MoviesToShow
         {
             get { return moviesToShow; }
-            set { moviesToShow = value;OnPropertyChanged(nameof(MoviesToShow)); }
+            set { moviesToShow = value; OnPropertyChanged(nameof(MoviesToShow)); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -58,15 +58,46 @@ namespace CinemaReservationApp
                 Button btn = new Button()
                 {
                     Content = movie.genre.ToUpper(),
-                    Style = (Style)FindResource("categoryButtons") 
+                    Style = (Style)FindResource("categoryButtons"),
+                };
+                btn.Click += (s, e) =>
+                {
+                    MoviesToShow.Clear();
+                    foreach (var m in Movies)
+                    {
+                        if (m.genre == movie.genre)
+                        {
+                            MoviesToShow.Add(m);
+                        }
+                    }
+                    ShowMoviesInGR();
                 };
                 stp.Children.Add(btn);
             }
+            Button allMovies = new Button()
+            {
+                Content = "ALL MOVIES",
+                Style = (Style)FindResource("categoryButtons"),
+            };
+            allMovies.Click += (s, e) =>
+            {
+                MoviesToShow.Clear();
+                foreach (var m in Movies)
+                {
+                    MoviesToShow.Add(m);
+                }
+                ShowMoviesInGR();
+            };
+            stp.Children.Add(allMovies);
             search_GR.Children.Add(stp);
+
         }
 
         private void ShowMoviesInGR()
         {
+            movies_GR.RowDefinitions.Clear();
+            movies_GR.Children.Clear();
+            movies_GR.ColumnDefinitions.Clear();
             foreach (var movie in MoviesToShow)
             {
                 RowDefinition row = new()
@@ -191,6 +222,15 @@ namespace CinemaReservationApp
                         Content = date,
                         Style = (Style)FindResource("categoryButtons"),
                         Margin = new Thickness(5, 0, 5, 0),
+                    };
+                    dateBTN.Click += (s, e) =>
+                    {
+                        DataWindow dataWindow = new DataWindow(movie.title, date);
+                        dataWindow.ShowDialog();
+                        if (dataWindow.DialogResult == true)
+                        {
+
+                        }
                     };
                     dateBTNS.Children.Add(dateBTN);
                 }
