@@ -50,7 +50,7 @@ namespace CinemaReservationApp
                     };
                     foreach (var item in Reservations)
                     {
-                        if (item.Seats.Contains(checkBox.Name))
+                        if (item.Seats.Contains(checkBox.Name) && item.MovieName == MovieTitle && item.Date == Date)
                         {
                             checkBox.IsEnabled = false;
                             checkBox.Background = Brushes.Red;
