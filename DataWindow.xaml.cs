@@ -19,9 +19,15 @@ namespace CinemaReservationApp
     /// </summary>
     public partial class DataWindow : Window
     {
+        public string MovieTitle { get; set; }
+        public string Date { get; set; }
         public DataWindow(string selectedTitle, string date)
         {
             InitializeComponent();
+            this.DataContext = this;
+            MovieTitle = selectedTitle;
+            Date = date;
         }
+
     }
 }
