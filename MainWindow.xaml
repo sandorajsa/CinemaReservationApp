@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CinemaReservationApp"
         mc:Ignorable="d"
-        Title="Popcorn Planet+" Height="1080" Width="1920" Background="#FFF8E1" WindowState="Maximized" Icon="./Resources/Images/logo.ico" ResizeMode="NoResize" FontFamily="./Resources/#Rubik">
+        Title="Popcorn Planet+" Height="1080" Width="1920" Background="#FFF8E1" WindowState="Maximized" Icon="./Resources/Images/logo.ico" ResizeMode="NoResize" FontFamily="./Resources/#Rubik" Closed="Window_Closed">
     <Window.Resources>
         <Style x:Key="categoryButtons" TargetType="Button">
             <Setter Property="Background" Value="#FFD54F"/>

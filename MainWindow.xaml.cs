@@ -17,6 +17,7 @@ namespace CinemaReservationApp
 {
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        public List<Reservation> Reservations { get; set; } = new();
         public ObservableCollection<Movie> Movies { get; set; }
         private ObservableCollection<Movie> moviesToShow;
 
@@ -44,6 +45,8 @@ namespace CinemaReservationApp
             string jsonStr = File.ReadAllText("./Resources/cinema_movies.json");
             Movies = JsonSerializer.Deserialize<ObservableCollection<Movie>>(jsonStr);
             MoviesToShow = JsonSerializer.Deserialize<ObservableCollection<Movie>>(jsonStr);
+            jsonStr = File.ReadAllText("./Resources/reservations.json");
+            Reservations = JsonSerializer.Deserialize<List<Reservation>>(jsonStr);
 
         }
         private void CatButtons()
@@ -225,11 +228,12 @@ namespace CinemaReservationApp
                     };
                     dateBTN.Click += (s, e) =>
                     {
-                        DataWindow dataWindow = new DataWindow(movie.title, date);
+                        DataWindow dataWindow = new DataWindow(new Reservation(),Reservations, movie.title, date);
                         dataWindow.ShowDialog();
                         if (dataWindow.DialogResult == true)
                         {
-
+                            Reservations.Add(dataWindow.Reservation);
+                            MessageBox.Show("Reservation successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                         }
                     };
                     dateBTNS.Children.Add(dateBTN);
@@ -239,6 +243,12 @@ namespace CinemaReservationApp
                 Grid.SetRow(border, movies_GR.RowDefinitions.Count - 1);
                 movies_GR.Children.Add(border);
             }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            string jsonStr = JsonSerializer.Serialize(Reservations, new JsonSerializerOptions() { WriteIndented = true });
+            File.WriteAllText("./Resources/reservations.json", jsonStr);
         }
     }
 }
